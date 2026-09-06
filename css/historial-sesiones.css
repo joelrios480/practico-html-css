@@ -1,0 +1,33 @@
+/* Estilos exclusivos de la pagina de historial de sesiones (pages/historial-sesiones.html) */
+
+.estado-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.estado-realizada {
+  background-color: rgba(22, 163, 74, 0.15);
+  color: var(--color-success);
+}
+
+.estado-no-realizada {
+  background-color: rgba(220, 38, 38, 0.15);
+  color: var(--color-error);
+}
+
+.estado-reprogramada {
+  background-color: rgba(217, 119, 6, 0.15);
+  color: #b45309;
+}
+
+.historial-vacio {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--spacing-lg);
+  color: var(--color-text-light);
+}
