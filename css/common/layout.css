@@ -58,6 +58,16 @@
   padding: var(--spacing-xl);
 }
 
+/* Encabezado reutilizable para las paginas internas de la app */
+.page-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.page-header p {
+  margin-top: var(--spacing-xs);
+  color: var(--color-text-light);
+}
+
 /* Responsivo: el nav pasa a barra horizontal en pantallas angostas */
 @media (max-width: 768px) {
   .app-layout {

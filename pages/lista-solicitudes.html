@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de solicitudes | Fisioterapia</title>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/common/variables.css" />
+    <link rel="stylesheet" href="../css/common/base.css" />
+    <link rel="stylesheet" href="../css/common/layout.css" />
+    <link rel="stylesheet" href="../css/lista-solicitudes.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="app-nav">
+        <div class="app-nav-brand">
+          <h2>Fisioterapia</h2>
+        </div>
+
+        <ul class="nav-list">
+          <li><a class="nav-link" href="dashboard.html">Inicio</a></li>
+          <li><a class="nav-link nav-link-active" href="lista-solicitudes.html" aria-current="page">Lista de solicitudes</a></li>
+          <li><a class="nav-link" href="registro-solicitudes.html">Registro de solicitudes</a></li>
+          <li><a class="nav-link" href="sesiones-agendadas.html">Sesiones agendadas</a></li>
+        </ul>
+
+        <a class="btn btn-primary btn-block" href="../index.html">Cerrar sesión</a>
+      </aside>
+
+      <main class="app-main">
+        <header class="page-header">
+          <h1>Lista de solicitudes</h1>
+          <p>Solicitudes de atención registradas</p>
+        </header>
+
+        <div class="table-container">
+          <table class="table-solicitudes">
+            <thead>
+              <tr>
+                <th scope="col">Nombre del paciente</th>
+                <th scope="col">CI</th>
+                <th scope="col">Fecha de solicitud</th>
+                <th scope="col">N° de sesiones</th>
+                <th scope="col">Diagnóstico</th>
+                <th scope="col">Código</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>María Gómez</td>
+                <td>4521678</td>
+                <td>05/09/2026</td>
+                <td>10</td>
+                <td>Lumbalgia crónica</td>
+                <td class="table-codigo">SOL-2026-001</td>
+              </tr>
+              <tr>
+                <td>Carlos Pérez</td>
+                <td>3894521</td>
+                <td>04/09/2026</td>
+                <td>8</td>
+                <td>Esguince de tobillo grado II</td>
+                <td class="table-codigo">SOL-2026-002</td>
+              </tr>
+              <tr>
+                <td>Ana Torres</td>
+                <td>6123457</td>
+                <td>03/09/2026</td>
+                <td>12</td>
+                <td>Rehabilitación post-quirúrgica de rodilla</td>
+                <td class="table-codigo">SOL-2026-003</td>
+              </tr>
+              <tr>
+                <td>Juan Rodríguez</td>
+                <td>5234891</td>
+                <td>03/09/2026</td>
+                <td>6</td>
+                <td>Tendinitis de hombro</td>
+                <td class="table-codigo">SOL-2026-004</td>
+              </tr>
+              <tr>
+                <td>Lucía Fernández</td>
+                <td>7845632</td>
+                <td>02/09/2026</td>
+                <td>15</td>
+                <td>Hernia discal L4-L5</td>
+                <td class="table-codigo">SOL-2026-005</td>
+              </tr>
+              <tr>
+                <td>Pedro Sánchez</td>
+                <td>2987341</td>
+                <td>01/09/2026</td>
+                <td>5</td>
+                <td>Fractura de muñeca en recuperación</td>
+                <td class="table-codigo">SOL-2026-006</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
