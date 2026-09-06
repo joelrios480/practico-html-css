@@ -1,0 +1,23 @@
+/* Estilos exclusivos de la pagina de registro de solicitudes (pages/registro-solicitudes.html) */
+
+.form-card {
+  max-width: 720px;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--spacing-xl);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-lg) var(--spacing-lg);
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+.form-grid .btn {
+  margin-top: var(--spacing-sm);
+}
