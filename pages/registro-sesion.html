@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrar sesión | Fisioterapia</title>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/common/variables.css" />
+    <link rel="stylesheet" href="../css/common/base.css" />
+    <link rel="stylesheet" href="../css/common/layout.css" />
+    <link rel="stylesheet" href="../css/common/forms.css" />
+    <link rel="stylesheet" href="../css/registro-sesion.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="app-nav">
+        <div class="app-nav-brand">
+          <h2>Fisioterapia</h2>
+        </div>
+
+        <ul class="nav-list">
+          <li><a class="nav-link" href="dashboard.html">Inicio</a></li>
+          <li><a class="nav-link" href="lista-solicitudes.html">Lista de solicitudes</a></li>
+          <li><a class="nav-link" href="registro-solicitudes.html">Registro de solicitudes</a></li>
+          <li><a class="nav-link nav-link-active" href="sesiones-agendadas.html" aria-current="page">Sesiones agendadas</a></li>
+        </ul>
+
+        <a class="btn btn-primary btn-block" href="../index.html">Cerrar sesión</a>
+      </aside>
+
+      <main class="app-main">
+        <header class="page-header">
+          <h1>Registrar sesión — <span id="paciente-nombre">Paciente</span></h1>
+          <p>CI: <span id="paciente-ci">—</span></p>
+          <a class="nav-link" id="volver-historial" href="sesiones-agendadas.html">&larr; Volver al historial</a>
+        </header>
+
+        <section id="registro-sesion-contenido" class="form-card">
+          <form id="registro-sesion-form" class="form-grid">
+            <div class="form-field">
+              <label for="fisioterapeuta">Fisioterapeuta</label>
+              <select id="fisioterapeuta" name="fisioterapeuta" required>
+                <option value="" disabled selected>Selecciona un fisioterapeuta</option>
+                <option value="Lic. Fernando Rojas">Lic. Fernando Rojas</option>
+                <option value="Lic. Patricia Vargas">Lic. Patricia Vargas</option>
+                <option value="Lic. Andrés Quispe">Lic. Andrés Quispe</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="duracion">Duración de la sesión (min)</label>
+              <input
+                type="number"
+                id="duracion"
+                name="duracion"
+                placeholder="Ej. 45"
+                min="1"
+                max="180"
+                required
+              />
+            </div>
+
+            <fieldset class="form-field-full form-fieldset">
+              <legend>Asistencia</legend>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="estado" value="Realizada" checked required />
+                  Realizada
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="estado" value="No realizada" />
+                  No realizada
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="estado" value="Reprogramada" />
+                  Reprogramada
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-field-full form-fieldset">
+              <legend>Lugar de atención</legend>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="lugar" value="Gabinete" checked required />
+                  Gabinete
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="lugar" value="Domicilio" />
+                  Domicilio
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset id="actividades-fieldset" class="form-field-full form-fieldset">
+              <legend>Actividades realizadas</legend>
+              <div class="checkbox-group">
+                <label class="checkbox-option">
+                  <input type="checkbox" name="actividades" value="Electroterapia" /> Electroterapia
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="actividades" value="Terapia manual" /> Terapia manual
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="actividades" value="Ejercicios de fortalecimiento" />
+                  Ejercicios de fortalecimiento
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="actividades" value="Estiramientos" /> Estiramientos
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="actividades" value="Masoterapia" /> Masoterapia
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="actividades" value="Calor local" /> Calor local
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="actividades" value="Ejercicios de equilibrio" />
+                  Ejercicios de equilibrio
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="actividades" value="Vendaje neuromuscular" />
+                  Vendaje neuromuscular
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-field-full">
+              <button type="submit" class="btn btn-primary btn-block">Registrar sesión</button>
+            </div>
+          </form>
+        </section>
+
+        <p id="registro-sesion-vacio" class="empty-message" hidden>
+          No se encontró al paciente indicado.
+        </p>
+      </main>
+    </div>
+
+    <script src="../js/historial-sesiones.js"></script>
+    <script src="../js/registro-sesion.js"></script>
+  </body>
+</html>

@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const tbody = document.getElementById("historial-tbody");
   const mensajeVacio = document.getElementById("historial-vacio");
   const contenido = document.getElementById("historial-contenido");
+  const btnRegistrarSesion = document.getElementById("btn-registrar-sesion");
 
   const claseEstado = {
     Realizada: "estado-realizada",
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   nombreEl.textContent = paciente.nombre;
   ciEl.textContent = paciente.ci;
   diagnosticoEl.textContent = paciente.diagnostico;
+  btnRegistrarSesion.href = `registro-sesion.html?paciente=${paciente.ci}`;
 
   paciente.sesiones.forEach((sesion) => {
     const fila = document.createElement("tr");

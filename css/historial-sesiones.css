@@ -24,14 +24,6 @@
   color: #b45309;
 }
 
-.registro-sesion {
-  margin-top: var(--spacing-xl);
-}
-
-.historial-vacio {
-  background-color: var(--color-surface);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-card);
-  padding: var(--spacing-lg);
-  color: var(--color-text-light);
+.historial-actions {
+  margin-top: var(--spacing-lg);
 }

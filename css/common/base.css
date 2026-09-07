@@ -69,6 +69,15 @@ a {
   width: 100%;
 }
 
+/* Mensaje de estado vacio reutilizable (ej. paciente no encontrado) */
+.empty-message {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--spacing-lg);
+  color: var(--color-text-light);
+}
+
 /* Utilidad para ocultar texto visualmente pero mantenerlo accesible */
 .sr-only {
   position: absolute;

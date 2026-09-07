@@ -1,9 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("registro-sesion-form");
-  if (!form) {
+  const params = new URLSearchParams(window.location.search);
+  const ci = params.get("paciente");
+  const paciente = HISTORIAL_SESIONES[ci];
+
+  const contenido = document.getElementById("registro-sesion-contenido");
+  const mensajeVacio = document.getElementById("registro-sesion-vacio");
+  const volverEl = document.getElementById("volver-historial");
+
+  if (!paciente) {
+    contenido.hidden = true;
+    mensajeVacio.hidden = false;
     return;
   }
 
+  document.getElementById("paciente-nombre").textContent = paciente.nombre;
+  document.getElementById("paciente-ci").textContent = paciente.ci;
+  volverEl.href = `historial-sesiones.html?paciente=${paciente.ci}`;
+
+  const form = document.getElementById("registro-sesion-form");
   const estadoRadios = form.querySelectorAll('input[name="estado"]');
   const duracionInput = document.getElementById("duracion");
   const actividadesCheckboxes = document.querySelectorAll('input[name="actividades"]');
@@ -33,19 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", (evento) => {
     evento.preventDefault();
-
-    const estado = form.querySelector('input[name="estado"]:checked').value;
-    const lugar = form.querySelector('input[name="lugar"]:checked').value;
-    const actividades = Array.from(actividadesCheckboxes)
-      .filter((checkbox) => checkbox.checked)
-      .map((checkbox) => checkbox.value)
-      .join(", ") || "Ninguna";
-
-    alert(
-      `Sesión registrada.\nFisioterapeuta: ${form.fisioterapeuta.value}\nEstado: ${estado}\nLugar: ${lugar}\nDuración: ${duracionInput.value} min\nActividades: ${actividades}`
-    );
-
-    form.reset();
-    actualizarCamposSegunEstado();
+    alert("Sesión registrada exitosamente.");
+    window.location.href = `historial-sesiones.html?paciente=${paciente.ci}`;
   });
 });
