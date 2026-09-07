@@ -24,6 +24,10 @@
   color: #b45309;
 }
 
+.registro-sesion {
+  margin-top: var(--spacing-xl);
+}
+
 .historial-vacio {
   background-color: var(--color-surface);
   border-radius: var(--radius-md);
