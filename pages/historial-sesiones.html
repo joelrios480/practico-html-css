@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Historial de sesiones | Fisioterapia</title>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/common/variables.css" />
+    <link rel="stylesheet" href="../css/common/base.css" />
+    <link rel="stylesheet" href="../css/common/layout.css" />
+    <link rel="stylesheet" href="../css/common/tables.css" />
+    <link rel="stylesheet" href="../css/historial-sesiones.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="app-nav">
+        <div class="app-nav-brand">
+          <h2>Fisioterapia</h2>
+        </div>
+
+        <ul class="nav-list">
+          <li><a class="nav-link" href="dashboard.html">Inicio</a></li>
+          <li><a class="nav-link" href="lista-solicitudes.html">Lista de solicitudes</a></li>
+          <li><a class="nav-link" href="registro-solicitudes.html">Registro de solicitudes</a></li>
+          <li><a class="nav-link nav-link-active" href="sesiones-agendadas.html" aria-current="page">Sesiones agendadas</a></li>
+        </ul>
+
+        <a class="btn btn-primary btn-block" href="../index.html">Cerrar sesión</a>
+      </aside>
+
+      <main class="app-main">
+        <header class="page-header">
+          <h1>Historial de sesiones — <span id="paciente-nombre">Paciente</span></h1>
+          <p>
+            CI: <span id="paciente-ci">—</span> · Diagnóstico:
+            <span id="paciente-diagnostico">—</span>
+          </p>
+          <a class="nav-link" href="sesiones-agendadas.html">&larr; Volver a sesiones agendadas</a>
+        </header>
+
+        <div id="historial-contenido">
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Estado</th>
+                  <th scope="col">Duración</th>
+                  <th scope="col">Actividades realizadas</th>
+                  <th scope="col">Fisioterapeuta</th>
+                </tr>
+              </thead>
+              <tbody id="historial-tbody"></tbody>
+            </table>
+          </div>
+
+          <div class="historial-actions">
+            <a id="btn-registrar-sesion" class="btn btn-primary" href="#">Registrar sesión</a>
+          </div>
+        </div>
+
+        <p id="historial-vacio" class="empty-message" hidden>
+          No se encontró historial de sesiones para este paciente.
+        </p>
+      </main>
+    </div>
+
+    <script src="../js/historial-sesiones.js"></script>
+    <script src="../js/historial-sesiones-render.js"></script>
+  </body>
+</html>

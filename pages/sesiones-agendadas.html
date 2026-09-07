@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sesiones agendadas | Fisioterapia</title>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/common/variables.css" />
+    <link rel="stylesheet" href="../css/common/base.css" />
+    <link rel="stylesheet" href="../css/common/layout.css" />
+    <link rel="stylesheet" href="../css/sesiones-agendadas.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="app-nav">
+        <div class="app-nav-brand">
+          <h2>Fisioterapia</h2>
+        </div>
+
+        <ul class="nav-list">
+          <li><a class="nav-link" href="dashboard.html">Inicio</a></li>
+          <li><a class="nav-link" href="lista-solicitudes.html">Lista de solicitudes</a></li>
+          <li><a class="nav-link" href="registro-solicitudes.html">Registro de solicitudes</a></li>
+          <li><a class="nav-link nav-link-active" href="sesiones-agendadas.html" aria-current="page">Sesiones agendadas</a></li>
+        </ul>
+
+        <a class="btn btn-primary btn-block" href="../index.html">Cerrar sesión</a>
+      </aside>
+
+      <main class="app-main">
+        <header class="page-header">
+          <h1>Sesiones agendadas hoy</h1>
+          <p>Pacientes con sesión programada para el día de hoy</p>
+        </header>
+
+        <section class="sessions-grid">
+          <a class="session-card" href="historial-sesiones.html?paciente=5234891">
+            <header class="session-card-header">
+              <h2>Juan Rodríguez</h2>
+              <span class="session-time">09:00</span>
+            </header>
+            <dl class="session-details">
+              <dt>CI</dt>
+              <dd>5234891</dd>
+              <dt>Celular</dt>
+              <dd>78912345</dd>
+              <dt>Diagnóstico</dt>
+              <dd>Tendinitis de hombro</dd>
+              <dt>Sesión</dt>
+              <dd>2 de 6</dd>
+            </dl>
+          </a>
+
+          <a class="session-card" href="historial-sesiones.html?paciente=7845632">
+            <header class="session-card-header">
+              <h2>Lucía Fernández</h2>
+              <span class="session-time">11:00</span>
+            </header>
+            <dl class="session-details">
+              <dt>CI</dt>
+              <dd>7845632</dd>
+              <dt>Celular</dt>
+              <dd>67891234</dd>
+              <dt>Diagnóstico</dt>
+              <dd>Hernia discal L4-L5</dd>
+              <dt>Sesión</dt>
+              <dd>4 de 15</dd>
+            </dl>
+          </a>
+
+          <a class="session-card" href="historial-sesiones.html?paciente=2987341">
+            <header class="session-card-header">
+              <h2>Pedro Sánchez</h2>
+              <span class="session-time">14:30</span>
+            </header>
+            <dl class="session-details">
+              <dt>CI</dt>
+              <dd>2987341</dd>
+              <dt>Celular</dt>
+              <dd>72345678</dd>
+              <dt>Diagnóstico</dt>
+              <dd>Fractura de muñeca en recuperación</dd>
+              <dt>Sesión</dt>
+              <dd>1 de 5</dd>
+            </dl>
+          </a>
+
+          <a class="session-card" href="historial-sesiones.html?paciente=4521678">
+            <header class="session-card-header">
+              <h2>María Gómez</h2>
+              <span class="session-time">16:00</span>
+            </header>
+            <dl class="session-details">
+              <dt>CI</dt>
+              <dd>4521678</dd>
+              <dt>Celular</dt>
+              <dd>71234567</dd>
+              <dt>Diagnóstico</dt>
+              <dd>Lumbalgia crónica</dd>
+              <dt>Sesión</dt>
+              <dd>3 de 10</dd>
+            </dl>
+          </a>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

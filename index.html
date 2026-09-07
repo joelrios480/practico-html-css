@@ -3,7 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fisioterapia</title>
+    <title>Iniciar sesión | Fisioterapia</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/common/variables.css" />
+    <link rel="stylesheet" href="css/common/base.css" />
+    <link rel="stylesheet" href="css/common/forms.css" />
+    <link rel="stylesheet" href="css/login.css" />
   </head>
-  <body></body>
+  <body>
+    <main class="login-page">
+      <section class="login-card">
+        <header class="login-card-header">
+          <h1>Fisioterapia</h1>
+          <p>Ingresa tus credenciales para continuar</p>
+        </header>
+
+        <form id="login-form" class="login-form" novalidate>
+          <div class="form-field">
+            <label for="usuario">Usuario</label>
+            <input
+              type="text"
+              id="usuario"
+              name="usuario"
+              placeholder="Ingresa tu usuario"
+              autocomplete="username"
+              required
+            />
+            <span class="form-field-error" id="usuario-error"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="contrasena">Contraseña</label>
+            <input
+              type="password"
+              id="contrasena"
+              name="contrasena"
+              placeholder="Ingresa tu contraseña"
+              autocomplete="current-password"
+              required
+            />
+            <span class="form-field-error" id="contrasena-error"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="js/usuarios.js"></script>
+    <script src="js/login.js"></script>
+  </body>
 </html>

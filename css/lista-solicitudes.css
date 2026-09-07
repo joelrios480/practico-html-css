@@ -1,0 +1,6 @@
+/* Estilos exclusivos de la pagina de lista de solicitudes (pages/lista-solicitudes.html) */
+
+.table-celular {
+  font-family: monospace;
+  color: var(--color-text-light);
+}

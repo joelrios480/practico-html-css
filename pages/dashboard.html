@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio | Fisioterapia</title>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/common/variables.css" />
+    <link rel="stylesheet" href="../css/common/base.css" />
+    <link rel="stylesheet" href="../css/common/layout.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="app-nav">
+        <div class="app-nav-brand">
+          <h2>Fisioterapia</h2>
+        </div>
+
+        <ul class="nav-list">
+          <li><a class="nav-link nav-link-active" href="dashboard.html" aria-current="page">Inicio</a></li>
+          <li><a class="nav-link" href="lista-solicitudes.html">Lista de solicitudes</a></li>
+          <li><a class="nav-link" href="registro-solicitudes.html">Registro de solicitudes</a></li>
+          <li><a class="nav-link" href="sesiones-agendadas.html">Sesiones agendadas</a></li>
+        </ul>
+
+        <a class="btn btn-primary btn-block" href="../index.html">Cerrar sesión</a>
+      </aside>
+
+      <main class="app-main">
+        <header class="dashboard-header">
+          <h1>Bienvenido, Administador</h1>
+          <p>Resumen general de la clínica</p>
+        </header>
+
+        <section class="cards-grid">
+          <article class="card">
+            <h2 class="card-title">Solicitudes pendientes</h2>
+            <p class="card-count">6</p>
+            <ul class="card-list">
+              <li>María Gómez — solicitado 05/09/2026</li>
+              <li>Carlos Pérez — solicitado 04/09/2026</li>
+              <li>Ana Torres — solicitado 03/09/2026</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2 class="card-title">Sesiones agendadas hoy</h2>
+            <p class="card-count">4</p>
+            <ul class="card-list">
+              <li>09:00 — Juan Rodríguez, rehabilitación de rodilla</li>
+              <li>11:00 — Lucía Fernández, terapia de espalda</li>
+              <li>14:30 — Pedro Sánchez, fisioterapia post-quirúrgica</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2 class="card-title">Sesiones concluidas</h2>
+            <p class="card-count">128</p>
+            <ul class="card-list">
+              <li>Sofía Ramírez — 05/09/2026</li>
+              <li>Diego Castro — 05/09/2026</li>
+              <li>Valentina Ruiz — 04/09/2026</li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
